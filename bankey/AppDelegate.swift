@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onBoardingViewController.delegate = self
         dummyViewController.logoutDelegate = self
-        window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
         mainViewController.selectedIndex = 0
         return true
     }

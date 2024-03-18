@@ -18,6 +18,10 @@
 		EE7535E62B9AE8F40047E7B0 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7535E52B9AE8F40047E7B0 /* LocalState.swift */; };
 		EE7535EA2B9AFAF30047E7B0 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7535E92B9AFAF30047E7B0 /* UIViewController+Utils.swift */; };
 		EE7535EC2B9AFE160047E7B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7535EB2B9AFE160047E7B0 /* MainViewController.swift */; };
+		EEDBA08C2BA15419003EA265 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBA08B2BA15419003EA265 /* AccountSummaryViewController.swift */; };
+		EEDBA08E2BA15F42003EA265 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBA08D2BA15F42003EA265 /* AccountSummaryHeaderView.swift */; };
+		EEDBA0902BA15F97003EA265 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEDBA08F2BA15F97003EA265 /* AccountSummaryHeaderView.xib */; };
+		EEEA13A82BA19848000AEC51 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA13A72BA19848000AEC51 /* AccountSummaryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		EE7535E52B9AE8F40047E7B0 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		EE7535E92B9AFAF30047E7B0 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		EE7535EB2B9AFE160047E7B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EEDBA08B2BA15419003EA265 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		EEDBA08D2BA15F42003EA265 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		EEDBA08F2BA15F97003EA265 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		EEEA13A72BA19848000AEC51 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +74,15 @@
 		EE7535C02B96F4D30047E7B0 /* bankey */ = {
 			isa = PBXGroup;
 			children = (
+				EE7535EB2B9AFE160047E7B0 /* MainViewController.swift */,
 				EE7535C12B96F4D30047E7B0 /* AppDelegate.swift */,
 				EE7535E42B9AE8EA0047E7B0 /* Utils */,
 				EE7535D92B982E790047E7B0 /* OnBoarding */,
 				EE7535D62B96F71D0047E7B0 /* Login */,
+				EEDBA08A2BA153F3003EA265 /* AccountSummary */,
 				EE7535CA2B96F4D40047E7B0 /* Assets.xcassets */,
 				EE7535CC2B96F4D40047E7B0 /* LaunchScreen.storyboard */,
 				EE7535CF2B96F4D40047E7B0 /* Info.plist */,
-				EE7535EB2B9AFE160047E7B0 /* MainViewController.swift */,
 			);
 			path = bankey;
 			sourceTree = "<group>";
@@ -104,6 +113,33 @@
 				EE7535E92B9AFAF30047E7B0 /* UIViewController+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EEDBA08A2BA153F3003EA265 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBA08B2BA15419003EA265 /* AccountSummaryViewController.swift */,
+				EEEA13A52BA1980C000AEC51 /* Header */,
+				EEEA13A62BA19823000AEC51 /* Cells */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		EEEA13A52BA1980C000AEC51 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBA08D2BA15F42003EA265 /* AccountSummaryHeaderView.swift */,
+				EEDBA08F2BA15F97003EA265 /* AccountSummaryHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EEEA13A62BA19823000AEC51 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EEEA13A72BA19848000AEC51 /* AccountSummaryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDBA0902BA15F97003EA265 /* AccountSummaryHeaderView.xib in Resources */,
 				EE7535CE2B96F4D40047E7B0 /* LaunchScreen.storyboard in Resources */,
 				EE7535CB2B96F4D40047E7B0 /* Assets.xcassets in Resources */,
 			);
@@ -179,10 +216,13 @@
 				EE7535EA2B9AFAF30047E7B0 /* UIViewController+Utils.swift in Sources */,
 				EE7535D82B96F76E0047E7B0 /* LoginView.swift in Sources */,
 				EE7535E62B9AE8F40047E7B0 /* LocalState.swift in Sources */,
+				EEDBA08E2BA15F42003EA265 /* AccountSummaryHeaderView.swift in Sources */,
 				EE7535DF2B99AA1F0047E7B0 /* DummyViewController.swift in Sources */,
 				EE7535C62B96F4D30047E7B0 /* LoginViewController.swift in Sources */,
+				EEEA13A82BA19848000AEC51 /* AccountSummaryCell.swift in Sources */,
 				EE7535C22B96F4D30047E7B0 /* AppDelegate.swift in Sources */,
 				EE7535EC2B9AFE160047E7B0 /* MainViewController.swift in Sources */,
+				EEDBA08C2BA15419003EA265 /* AccountSummaryViewController.swift in Sources */,
 				EE7535DB2B982E9C0047E7B0 /* OnBoardingContainerViewController.swift in Sources */,
 				EE7535DD2B98465F0047E7B0 /* OnBoardingViewController.swift in Sources */,
 			);
