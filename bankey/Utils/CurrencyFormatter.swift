@@ -22,16 +22,14 @@ struct CurrencyFormatter {
         return (dollars, cents)
     }
     
-    // Converts 929466 > 929,466
     private func convertDollar(_ dollarPart: Double) -> String {
         let dollarsWithDecimal = dollarsFormatted(dollarPart) // "$929,466.00"
-            let formatter = NumberFormatter()
-            let decimalSeparator = formatter.decimalSeparator ?? "." // Fallback to "." if decimal separator is not available
-            let dollarComponents = dollarsWithDecimal.components(separatedBy: decimalSeparator)
-            var dollars = dollarComponents.first ?? "" // Fallback to empty string if components are not available
-     
-            dollars = dollars.replacingOccurrences(of: ",", with: "") // Remove the ","
-            return dollars
+        let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+        
+            formatter.currencySymbol = ""                  // <--------
+            formatter.currencyGroupingSeparator = ""       // <--------
+        return formatter.string(from: dollarPart as NSNumber)!
     }
     
     // Convert 0.23 > 23
@@ -49,6 +47,7 @@ struct CurrencyFormatter {
     func dollarsFormatted(_ dollars: Double) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
+        formatter.locale = Locale.current
         formatter.usesGroupingSeparator = true
         
         if let result = formatter.string(from: NSNumber(value: dollars)) {
@@ -63,8 +62,8 @@ struct CurrencyFormatter {
         let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .title1)]
         let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8]
         
-        let rootString = NSMutableAttributedString(string: "", attributes: dollarSignAttributes)
-        let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
+        let rootString = NSMutableAttributedString(string: "Rp", attributes: dollarSignAttributes)
+        let dollarString = NSMutableAttributedString(string: dollars, attributes: dollarAttributes)
         let centString = NSAttributedString(string: cents, attributes: centAttributes)
         
         rootString.append(dollarString)
