@@ -10,7 +10,7 @@ import XCTest
 
 @testable import bankey
 
-class Test: XCTestCase{
+class CurrencyFormatterTest: XCTestCase{
     var formatter: CurrencyFormatter!
     
     override func setUp()  {
@@ -30,7 +30,7 @@ class Test: XCTestCase{
         let symbol = locale.currencySymbol!
         let result = formatter.dollarsFormatted(929466.23)
         
-        XCTAssertEqual(result.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression), "\(symbol) 929.466")
+        XCTAssertEqual(result, "\(symbol) 929.466")
     }
 
     // Challenge: You write
@@ -38,7 +38,7 @@ class Test: XCTestCase{
         let locale = Locale.current
         let symbol = locale.currencySymbol!
         let result = formatter.dollarsFormatted(0.00)
-        XCTAssertEqual(result.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression), "\(symbol) 0")
+        XCTAssertEqual(result, "\(symbol) 0")
     }
 }
 

@@ -51,7 +51,7 @@ struct CurrencyFormatter {
         formatter.usesGroupingSeparator = true
         
         if let result = formatter.string(from: NSNumber(value: dollars)) {
-            return result
+            return result.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
         }
         
         return ""
