@@ -11,6 +11,8 @@
 		7882DDB12BA946490005A969 /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DDB02BA946490005A969 /* DecimalUtils.swift */; };
 		7882DDB92BA96DA20005A969 /* bankeyUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DDB82BA96DA20005A969 /* bankeyUnitTests.swift */; };
 		7882DDC02BA975820005A969 /* CurrencyFormatterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DDBF2BA975820005A969 /* CurrencyFormatterTest.swift */; };
+		7882DDC22BAAD3180005A969 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DDC12BAAD3180005A969 /* NSNotificationName.swift */; };
+		7882DDC42BAAD4E70005A969 /* UITextField+SecureToogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DDC32BAAD4E70005A969 /* UITextField+SecureToogle.swift */; };
 		EE7535C22B96F4D30047E7B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7535C12B96F4D30047E7B0 /* AppDelegate.swift */; };
 		EE7535C62B96F4D30047E7B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7535C52B96F4D30047E7B0 /* LoginViewController.swift */; };
 		EE7535CB2B96F4D40047E7B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7535CA2B96F4D40047E7B0 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		7882DDB62BA96DA20005A969 /* bankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7882DDB82BA96DA20005A969 /* bankeyUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankeyUnitTests.swift; sourceTree = "<group>"; };
 		7882DDBF2BA975820005A969 /* CurrencyFormatterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTest.swift; sourceTree = "<group>"; };
+		7882DDC12BAAD3180005A969 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
+		7882DDC32BAAD4E70005A969 /* UITextField+SecureToogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToogle.swift"; sourceTree = "<group>"; };
 		EE7535BE2B96F4D30047E7B0 /* bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7535C12B96F4D30047E7B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE7535C52B96F4D30047E7B0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				EE7535E92B9AFAF30047E7B0 /* UIViewController+Utils.swift */,
 				7882DDAE2BA946120005A969 /* CurrencyFormatter.swift */,
 				7882DDB02BA946490005A969 /* DecimalUtils.swift */,
+				7882DDC12BAAD3180005A969 /* NSNotificationName.swift */,
+				7882DDC32BAAD4E70005A969 /* UITextField+SecureToogle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -297,11 +303,13 @@
 				EEDBA08E2BA15F42003EA265 /* AccountSummaryHeaderView.swift in Sources */,
 				EE7535DF2B99AA1F0047E7B0 /* DummyViewController.swift in Sources */,
 				EE7535C62B96F4D30047E7B0 /* LoginViewController.swift in Sources */,
+				7882DDC22BAAD3180005A969 /* NSNotificationName.swift in Sources */,
 				7882DDAF2BA946120005A969 /* CurrencyFormatter.swift in Sources */,
 				7882DDB12BA946490005A969 /* DecimalUtils.swift in Sources */,
 				EEEA13A82BA19848000AEC51 /* AccountSummaryCell.swift in Sources */,
 				EE7535C22B96F4D30047E7B0 /* AppDelegate.swift in Sources */,
 				EE7535EC2B9AFE160047E7B0 /* MainViewController.swift in Sources */,
+				7882DDC42BAAD4E70005A969 /* UITextField+SecureToogle.swift in Sources */,
 				EEDBA08C2BA15419003EA265 /* AccountSummaryViewController.swift in Sources */,
 				EE7535DB2B982E9C0047E7B0 /* OnBoardingContainerViewController.swift in Sources */,
 				EE7535DD2B98465F0047E7B0 /* OnBoardingViewController.swift in Sources */,

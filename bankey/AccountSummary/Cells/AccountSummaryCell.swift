@@ -53,6 +53,7 @@ extension AccountSummaryCell{
         typeLabel.translatesAutoresizingMaskIntoConstraints = false
         typeLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         typeLabel.adjustsFontForContentSizeCategory = true
+        typeLabel.adjustsFontSizeToFitWidth = true
     
         
         underlineView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,6 +61,7 @@ extension AccountSummaryCell{
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        nameLabel.adjustsFontSizeToFitWidth = true
        
         
         balanceStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -119,7 +121,6 @@ extension AccountSummaryCell{
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
         balanceAmountLabel.attributedText = vm.balanceAsAttributedString
-        print(balanceAmountLabel.text)
         switch vm.accountType{
         case .Banking:
             underlineView.backgroundColor = appColor

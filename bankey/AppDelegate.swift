@@ -23,10 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .systemBackground
         loginViewController.delegate = self
         onBoardingViewController.delegate = self
-        
+        registerForNotification()
         displayLogin()
         
         return true
+    }
+    
+    private func registerForNotification(){
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
     }
     
     private func displayLogin(){
@@ -65,7 +69,7 @@ extension AppDelegate : OnBoardingContainerViewControllerDelegate{
 }
 
 extension AppDelegate : LogoutViewControllerDelegate{
-    func didLogout() {
+    @objc func didLogout() {
         setRootViewController(loginViewController)
     }
 }
